@@ -1,0 +1,65 @@
+.text-logo, .text-logo-inverse{
+	font-size: 2.8rem;
+	text-shadow: #555 2px 2px 3px;
+	color: #333;
+}
+
+.text-logo-inverse{
+	color: #bbb !important;
+}
+
+.text-federacion, .icono{
+	font-size: 1.4rem;
+	color: #ddd;
+}
+
+.imagen-p{
+	width: 3rem;
+}
+.imagen-p-w{
+	width: 6rem;
+}
+.imagen-p-h{
+	height: 7rem;
+}
+.imagen-ps{
+	height: 5rem;
+	width: 4rem;
+}
+.color-1{
+	background: #03A9F4 !important;
+}
+
+.color-2{
+	background: #009688;
+}
+.color-3{
+	background: #9C27B0;
+}
+.color-4{
+	background: #3F51B5;
+}
+.color-5{
+	background: #FF5722;
+}
+a.enlace:hover{
+	text-decoration: none;
+	cursor:pointer;
+}
+.text-medio{
+	font-size: 2rem;
+}
+.text-small{
+	font-size: .5rem;	
+}
+.tarjeta {
+    width: 1rem; 
+    height: 1.5rem; 
+}
+
+.tarjeta-amarilla{
+	background: yellow;
+}
+.tarjeta-roja{
+	background: red;
+}

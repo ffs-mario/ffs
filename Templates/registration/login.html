@@ -1,0 +1,67 @@
+{% extends 'bases/base.html' %}
+
+{% load static %}
+
+{% block title %}
+FFS
+{% endblock %}
+
+{% block static %}
+	<link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+	<link rel="stylesheet" href="{% static 'css/all.css' %}">
+	<link rel="stylesheet" href="{% static 'css/menu-slidebar.css' %}">
+	<link rel="stylesheet" href="{% static 'css/own_styles.css' %}">
+	
+	<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+
+
+{% endblock %}
+
+
+{% block body %}
+	
+	{% include 'bases/header.html' %}
+
+	<div class="container-fluid">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 m-auto py-4 my-4">
+					<form action="{% url 'login' %}" role="form" class="w-100 d-block" id="login_form" method="post"> {% csrf_token %}
+						<h2 class="text-center">Ingresar</h2>
+						<hr class="colorgraph">
+						<div class="form-group d-block text-center">
+
+							<div class="row">
+								<div class="col-12 input-group mt-3 position-relative">
+									<input class="w-100 rounded inputs" type="text" id="id_username" name="username">
+									<label class="ml-4 label" for="username">Usuario.</label>
+								</div>
+							</div>
+							<div class="row align-items-center">
+								<div class="col-10 input-group mt-3 position-relative">
+									<input class="w-100 rounded inputs pass" type="password" id="id_password" name="password">
+									<label class="ml-4 label" for="username">Contraseña.</label>
+								</div>
+								<div class="col-2 mt-md-3 pl-0">
+									<span class="fa fa-eye-slash rounded-circle eye-show show_hide_password" aria-hidden="true"></span>
+								</div>
+							</div>
+
+						</div>
+						<hr class="colorgraph my-4">
+
+						<div class="row">
+							<div class="col-sm-12 col-md-6 col-lg-12 text-center">
+								<input type="submit" class="btn btn-lg-lg btn-outline-success btn-block" value="Iniciar Sesion">
+							</div>
+						</div>
+				</form>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+{% block scripts %}
+
+	<script src="{% static 'js/input-form.js' %}"></script>
+{% endblock %}

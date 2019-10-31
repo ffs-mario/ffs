@@ -1,0 +1,215 @@
+*{
+	margin: 0;
+	padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: inherit;
+}
+
+.contenedor{
+	width: 80%;
+	margin: 0 auto;
+}
+.small_contenedor{
+	width: 38%;
+	margin: 4rem auto;
+}
+header{
+	z-index: 1;
+	display: block;
+	top: 0;
+	left:0;
+	box-shadow: 2px 2px #f4f4f4;
+}
+
+.nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.nav span{
+	color: #818181;
+}
+.nav a{
+	padding: 0.5rem;
+}
+.nav > a > img{
+	width: 5rem;
+}
+
+.buttons {
+    display: inline-flex;
+    width: 50%;
+    justify-content: center;
+    border-bottom: 3px solid #818181;
+    padding: 1rem 0;
+    color: #818181;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.buttons:hover{
+	cursor: pointer;
+}
+
+.active{
+	border-bottom-color: green;
+	color: green;
+}
+
+.botones{
+	margin: 1rem auto;
+	margin-bottom: 0;
+}
+
+.formulario{
+	display: block;
+}
+form{
+	margin: 0;
+	padding: 0;
+}
+.form-control {
+    width: 49%;
+    display: inline-block;
+    margin:  0 0.5%;
+    margin-top: 1rem;
+}
+
+.form-control-big{
+    display: block;
+    width: 100%;
+    margin: 0;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #212121;
+}
+
+.form-control > label {
+    display: block;
+    text-align: left;
+    font-size: 0.8rem;
+    color: #818181;
+    margin: 0.2rem auto;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    border: none;
+    padding: 0;
+    border: 1px solid #818181;
+    background-color: #f4f4f4;
+    border-radius: 0.2rem;
+    padding: .7rem .5rem;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="email"]:focus,input[type="text"]:focus, input[type="password"]:focus{
+	background-color: white;
+}
+
+
+.form-control > a {
+    color: #818181;
+    font-size: 0.8rem;
+    margin: 1rem  auto;
+    display: block;
+}
+
+.form-control > a:hover{
+	color: #212121;
+}
+
+.form-control-big > .icon-lock:before{
+	padding: 0 0.5rem;
+}
+
+.form-control-big > .buton {
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0.7rem;
+    border: 1px solid transparent;
+    background: green;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 0.3rem;
+    box-sizing: border-box;
+
+}
+
+.icon-lock.buton:hover {
+    background: darkgreen;
+    cursor: pointer;
+}
+
+.social {
+    border-top: 1px solid #818181;
+    padding-top: 1rem;
+    margin-top: 2rem;
+}	
+
+.social > a {
+    width: 49%;
+    padding: 0.7rem;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 1rem 0.5%;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.social > a.icon-facebook-circled{
+	background: #0062b3;
+}
+
+.social > a.icon-gplus{
+	background: #cd3919;
+}
+
+.social > a:before{
+	padding: 0 1rem;
+}
+
+.fot {
+    border-top: 1px solid #818181;
+    border-bottom: 1px solid #818181;
+    padding: 1.5rem 1rem;
+    font-size: 0.7rem;
+}
+
+.copy{
+	padding: 1rem;
+	font-size: 0.8rem;	
+}
+
+.fot > a{
+	color: #818181;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding-right: 1rem;
+}
+
+.fot >  .fot-text{
+	padding: 0 1rem;
+	border-left: 1px solid #818181;
+	border-right: 1px solid #818181;
+}
+
+.fot >  .fot-text2{
+	padding: 0 1rem;
+}
+
+.copy  > p{
+	color: #818181;
+}
+
+.registro{
+	display: none;
+}
+
+.form-control-big > label > a{
+	color: green;
+}

@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Concert+One');
+
+*{
+	font-family: 'Concert One', cursive;
+	letter-spacing: 0.03rem;
+}
+.gradient{
+	background: rgba(149,92,255,1);
+	background: -moz-linear-gradient(left, rgba(149,92,255,1) 0%, rgba(246,41,12,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(149,92,255,1)), color-stop(100%, rgba(246,41,12,1)));
+	background: -webkit-linear-gradient(left, rgba(149,92,255,1) 0%, rgba(246,41,12,1) 100%);
+	background: -o-linear-gradient(left, rgba(149,92,255,1) 0%, rgba(246,41,12,1) 100%);
+	background: -ms-linear-gradient(left, rgba(149,92,255,1) 0%, rgba(246,41,12,1) 100%);
+	background: linear-gradient(to right, rgba(149,92,255,1) 0%, rgba(246,41,12,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#955cff', endColorstr='#f6290c', GradientType=1 );
+}
+.colorgraph {
+	height: 0.18rem;
+	border-top: 0;
+	background: #c4e17f;
+	border-radius: 0;
+	background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+	background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+	background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+	background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+
+/*inputs para formulario animado*/
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"],
+.select{
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.2s ease;
+	color: #414141;
+	outline: none;
+	background: none;
+	border: 2px solid /*#2E86C1*/ #a1a1a1 !important;
+	padding: 0.5rem;
+	z-index: 1;
+}
+
+.input-group input.active,
+.input-group select.active{
+	z-index: 0;
+	border-color: #2E86C1 !important;
+}
+
+input.active.value{
+	border-color: #a1a1a1 !important;
+}
+
+label.active.value{
+	color: #a1a1a1 !important;
+}
+
+.input-group > label {
+  color: #a1a1a1;
+}
+
+.input-group > label.label {
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.2s ease;
+	position: absolute;
+	top: 8%;
+	left: 0;
+	background: white;
+	padding: 0.4rem;
+}
+.input-group label.active {
+	top: -12px;
+	margin-left: 0px !important;
+	/*left: -2%;*/
+	font-size: 12px;
+	line-height: 12px;
+	color: #2E86C1;
+}
+/*fin */
+
+.carousel-height{
+	height: 15rem !important;
+}
+
+
+/*eye show lock*/
+
+
+.eye-show{
+	font-size: 1.3rem !important;
+	padding: 0.5rem;
+	background: transparent;
+	color: #a1a1a1;
+	border: solid 0.1rem #a1a1a1;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.2s ease;
+}
+
+.eye-show.active{
+	color: #2E86C1;
+	border-color: #2E86C1;
+}
+
+.title-text{
+	font-size: 1.8rem;
+	color: #c1c1c1;
+}
+.text-md{
+	font-size: 1.2rem !important;
+}
+a.nav-link{
+	color:#a1a1a1 !important;
+}
+
+.input-group input.focus,
+.input-group select.focus{
+	z-index: 0;
+	border-color: #2E86C1 !important;
+}
+
+.input-group label.focus{
+	color: #2E86C1 !important;
+}
+
+.h-image{
+	height: 10rem;
+	cursor: pointer;
+}
+
+.h-image-small{
+	height: 8rem;
+}
+
+.text-overflow{
+	overflow: hidden;
+    white-space: pre;
+    text-overflow: ellipsis;
+}
+/** EFECTO IMAGEN DE PERFIL**/

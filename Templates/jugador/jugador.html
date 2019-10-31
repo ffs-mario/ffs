@@ -1,0 +1,71 @@
+{% extends 'bases/base.html' %}
+
+{% load static %}
+
+{% block title %}
+FFS // {{ club.nombre }}
+{% endblock %}
+
+{% block static %}
+	<link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+	<link rel="stylesheet" href="{% static 'css/all.css' %}">
+{% endblock %}
+
+
+{% block body %}
+
+	{% include 'bases/header.html' %}
+	
+	<div class="container-fluid color-1">
+		<div class="container">
+			<div class="row ">
+				<div class="col-lg-8 pt-4">
+					<div class="col-lg-12 p-1 d-flex justify-content-center align-items-center">
+						<img src="{{ jugador.foto.url }}" alt="" class="w-50 p-4 bg-white rounded-circle">
+					</div>
+					<div class="col-lg-12 py-4 d-flex justify-content-center align-items-center">
+						<span class="text-light text-shadow text-medio">{{ jugador.nombre }} {{jugador.apellido}}</span>
+					</div>
+				</div>
+				<div class="col-lg-3 py-4">
+					{% if user.is_authenticated %}
+					<div class="col-lg-12 p-0 mt-3 rounded shadow border-light border">
+						<span class="bg-white text-dark d-block w-100 rounded-top p-1">Datos</span>
+						<span class="text-light d-block w-100 p-1">Dni: {{ jugador.dni }}</span>
+						<span class="text-light d-block w-100 p-1">Direccion: {{ jugador.direccion }}</span>
+
+					</div>
+					{% endif %}
+					<div class="col-lg-12 p-0 mt-3 rounded shadow border border-light">
+						<span class="bg-white text-dark d-block w-100 rounded-top p-1">Club</span>
+						<div class="p-3 d-flex align-items-center">
+							<img src="{{ club.foto.url }}" alt="" class="w-25">
+							<span class="text-medio text-shadow text-light ml-2">{{club.nombre}}</span>
+						</div>
+					</div>
+					<div class="col-lg-12 p-0 mt-3 rounded shadow border border-light">
+						<span class="bg-white text-dark d-block w-100 rounded-top p-1">Topicos</span>	
+						<div class="d-flex">
+							<div class="col-lg-4 p-2 d-flex justify-content-center flex-wrap">
+								<div class="tarjeta tarjeta-amarilla rounded">
+								</div>
+								<span class="d-block w-100 text-center text-light">0</span>
+							</div>
+
+							<div class="col-lg-4 p-2 d-flex justify-content-center flex-wrap">
+								<div class="tarjeta tarjeta-roja rounded">
+								</div>
+								<span class="d-block w-100 text-center text-light">0</span>
+							</div>
+
+							<div class="col-lg-4 p-2 d-flex justify-content-center flex-wrap">
+								<i class="fa fa-futbol text-light"></i>
+								<span class="d-block w-100 text-center text-light">0</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

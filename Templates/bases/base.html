@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{% block title %}{% endblock %}</title>
+	<meta charset="utf-8">
+	{% block static %}{% endblock %}
+	{% load bootstrap4 %}
+	{% bootstrap_css %}
+</head>
+<body>
+	{% block body %}{% endblock %}
+</body>
+	{% block scripts %}{% endblock %}
+	{% bootstrap_javascript jquery='full' %}
+</html>

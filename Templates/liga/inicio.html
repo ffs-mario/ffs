@@ -1,0 +1,85 @@
+{% extends 'bases/base.html' %}
+
+{% load static %}
+
+{% block title %}
+FFS
+{% endblock %}
+
+{% block static %}
+	<link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+	<link rel="stylesheet" href="{% static 'css/all.css' %}">
+{% endblock %}
+
+
+{% block body %}
+
+	{% include 'bases/header.html' %}
+
+	<div class="container-fluid">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="col-lg-5 shadow m-1 p-2 text-center d-flex rounded align-items-center justify-content-center">
+					<img src="{% static division.logo.url %}" alt="" class="imagen-p mr-4">
+					<span class="text-medio text-dark text-uppercase">
+						{{division.nombre}}
+					</span>
+				</div>
+				{% for divisiones in divisiones %}
+				<div class="col-lg-2 color-1 text-center rounded m-1 shadow align-items-center d-flex justify-content-center">
+					<img src="{{ division.logo.url }}" alt="" class="w-25 mr-2 ">
+					<a href="{% url 'inicio' division=divisiones.id %}" class="text-light enlace">
+						{{ divisiones.nombre }}
+					</a>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		
+		<div class="container my-2">
+			<div class="row d-flex justify-content-center">
+				<div class="col-lg-3 p-0">
+					<div class="col-lg-12 p-3 text-light my-1 rounded color-1">
+						<i class="fa fa-trophy mr-2"></i>Tabla De Clasificasiones		
+					</div>
+					<div class="col-lg-12 p-3 my-1 text-light rounded color-2">
+						<i class="fa fa-calendar mr-2"></i>Proxima Fecha
+					</div>
+					<div class="col-lg-12 p-3 my-1 text-light rounded color-3">
+						<i class="fa fa-futbol mr-2"></i>Goleadores
+					</div>
+
+					{% if user.is_authenticated %}
+						<div class="col-lg-12 text-light p-3 my-1 rounded color-4">
+							<i class="fa fa-database mr-2"></i>Actualizar Fechas
+						</div>
+						<div class="col-lg-12 text-light p-3 my-1 rounded color-5">
+							<a href="{% url 'logout' %}" class="enlace text-light">
+								<i class="fas fa-sign-out-alt mr-2"></i>Cerrar Sesion
+							</a>
+						</div>
+					{% endif %}		
+				</div>
+				
+				<div class="col-lg-9 d-flex flex-wrap justify-content-center">
+				{% for club in club %}
+					<div class="col-lg-2 bg-white shadow d-flex flex-wrap p-2 m-2 rounded shadow">
+						<div class="p-0 m-0  w-100">
+						<a href="{% url 'club' id=club.id %}" class="d-block w-100 enlace text-dark">
+							<span class="d-block w-100 text-center">{{ club.nombre }}</span>
+							<div class="d-flex justify-content-center">
+							<img src="{{ club.foto.url }}" alt="" class="imagen-p-h imagen-p-w">
+							</div>
+						</a>
+						</div>
+					</div>
+				{% endfor %}
+				</div>
+				
+			</div>
+		</div>		
+	</div>
+{% endblock %}
